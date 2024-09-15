@@ -9,25 +9,21 @@ public class StringCharacters {
 
         int spaces = 0, vowels = 0, consonants = 0;
 
-        // Loop through each character in the text
         for (int i = 0; i < text.length(); i++) {
-            char ch = Character.toLowerCase(text.charAt(i));  // Convert to lowercase for uniformity
+            char ch = Character.toLowerCase(text.charAt(i));  
 
-            // Check if the character is a vowel
             if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
                 vowels++;
             } 
-            // Check if it's a space
+          
             else if (ch == ' ') {
                 spaces++;
             }
-            // Check if it's a letter (not a vowel) which makes it a consonant
+
             else if (ch >= 'a' && ch <= 'z') {
                 consonants++;
             }
         }
-
-        // Output the counts
         System.out.println("The text contains vowels: " + vowels);
         System.out.println("The text contains consonants: " + consonants);
         System.out.println("The text contains spaces: " + spaces);
